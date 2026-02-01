@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine 💖</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+  background: linear-gradient(180deg,#ffd0e5,#ffe8f2,#fff);
+}
+.bounce2{
+  animation:bounce2 2s infinite;
+}
+@keyframes bounce2{
+  0%,20%,50%,80%,100%{transform:translateY(0)}
+  40%{transform:translateY(-20px)}
+  60%{transform:translateY(-10px)}
+}
+</style>
+</head>
+
+<body class="flex items-center justify-center h-screen">
+
+<div class="text-center p-6">
+  <img src="default.gif" class="mx-auto h-72 rounded-md mb-6">
+  <h2 class="text-4xl font-bold italic text-pink-700 mb-6">
+    Will you be my Valentine?
+  </h2>
+
+  <div class="flex gap-6 justify-center">
+    <button id="yesBtn"
+      class="bounce2 bg-green-500 hover:bg-green-400 text-white px-6 py-3 rounded-lg text-xl">
+      Yes 💖
+    </button>
+
+   </button>
+
+  <button id="noBtn"
+    class="bg-red-500 text-white px-6 py-3 rounded-lg text-xl"
+    style="position:absolute; left:150px; top:0;">
+    No 🙈
+  </button>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+
+// Move No button randomly
+function moveNoButton() {
+  const padding = 20;
+  const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+  const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+
+  const randomX = Math.random() * maxX;
+  const randomY = Math.random() * maxY;
+
+  noBtn.style.left = randomX + "px";
+  noBtn.style.top = randomY + "px";
+}
+
+// Desktop: hover triggers move
+noBtn.addEventListener("mouseenter", moveNoButton);
+
+// Mobile: tap triggers move
+noBtn.addEventListener("touchstart", (e) => {
+  e.preventDefault();
+  moveNoButton();
+});
+
+// Yes button works normally
+document.getElementById("yesBtn").onclick = () => {
+  window.location.href = "queen.html";
+};
+</script>
+
+</body>
+</html>

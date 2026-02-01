@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This one is for my Queen</title>
+
+  <style type="text/css">
+    @font-face {
+      font-family: digit;
+      src: url('digital-7_mono.ttf') format("truetype");
+    }
+
+    /* NORMAL LOVE LETTER STYLE */
+    #code {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+      background: none;
+      white-space: normal;
+    }
+
+    #code p {
+      margin-bottom: 15px;
+    }
+
+    #code .comments {
+      display: none;
+    }
+
+    #heartspan {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #heartspan i {
+      font-size: 42px;
+      color: #ff4d6d;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    #tapHint {
+      text-align: center;
+      color: #ff69b4;
+      font-size: 14px;
+      margin-top: 10px;
+      opacity: 1;
+      transition: opacity 1.5s ease;
+    }
+  </style>
+
+  <link href="css/default.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/garden.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<script>
+document.addEventListener("click", function () {
+  const music = document.getElementById("music");
+  const hint = document.getElementById("tapHint");
+
+  if (music.paused) {
+    music.play();
+  }
+
+  if (hint) {
+    hint.style.opacity = "0";
+    setTimeout(() => {
+      hint.style.display = "none";
+    }, 1500);
+  }
+}, { once: true });
+</script>
+
+<body>
+
+<div id="tapHint">Tap anywhere 💖</div>
+
+<audio id="music" loop>
+  <source src="music/ordinary.mp3" type="audio/mpeg">
+</audio>
+
+<div id="mainDiv">
+  <div id="content">
+    
+    <!-- LOVE LETTER -->
+    <div id="code">
+      <p>Hey Kairetu💖
+      I fell in love with you not because of what my eyes saw,
+but because of what my heart felt the moment you became you to me.</p>
+
+      <p>
+        I’ve known you since primary school, watched life shape you gently, and somehow you grew into the sweetest soul I’ve ever known. There is a quiet kindness in you, a warmth that doesn’t try to be loud, yet fills every space you step into. Loving you feels natural—like something my heart had been preparing for long before I understood it.😍😍<br>
+        I still smile when I remember the day you came to my place. I didn’t have much to offer—no grand gestures, no perfect setting—but I had a happy heart because you were there. Your presence alone made everything feel enough. You made my simple space feel full.😙🥰😍
+      </p>
+
+      <p>
+        And about the name Kuka—I didn’t choose it randomly. I kept it because it kept me closer to you. Ku from Kuria, Ka from Kareeh. A little piece of me wrapped in you, and you wrapped in me. Every time I say it, every time calls me kuka, it feels playful, flirty… and secretly ours...
+      </p>
+
+      <p>
+        You deserve a whole library written about how beautiful you are. Not just the kind of beauty people see, but the kind they feel—the way you care, the way you listen, the way your existence makes the world a little softer. Pages wouldn’t be enough to explain how special you are to me.💓💞 
+      </p>
+
+      <p>
+        If love were words, I’d spend a lifetime writing them just to describe you.
+      </p>
+
+      <p>If love were time, I’d give you all of mine:</p>
+
+      <p>
+        <strong>Always,
+Cyrus</strong><br>
+        And I will keep choosing you,
+        today, tomorrow, and always 😌💖
+      </p>
+
+      <p>
+        Now if you want to hug me,
+        you can touch the heart below 💕
+      </p>
+
+      <div id="heartspan">
+        <a href="image.jpeg">
+          <i class="fas fa-heart"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- HEART ANIMATION -->
+    <div id="loveHeart">
+      <canvas id="garden"></canvas>
+      <div id="words">
+        <div id="messages">
+          Utaishi Kuwa My QUEEN FOREVER
+          <div id="elapseClock"></div>
+        </div>
+        <div id="loveu">
+          I LOVE YOU SO MUCH<br/>
+          <div class="signature">- Your King (Kuka)</div>
+        </div>
+      </div>
+    </div>
+
+<!-- See More Fun button -->
+<button onclick="window.location.href='gifsss.html'"
+  class="bg-pink-500 text-white px-6 py-3 rounded-lg text-xl mt-6">
+  See More Fun 💖
+</button>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+
+var together = new Date();
+together.setFullYear(2026, 1, 1);
+together.setHours(16);
+together.setMinutes(47);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+  var msg = document.createElement("div");
+  msg.id = "errorMsg";
+  msg.innerHTML = "Your browser doesn't support HTML5!";
+  document.body.appendChild(msg);
+  $("#code").hide();
+  document.execCommand("stop");
+} else {
+  setTimeout(function () {
+    startHeartAnimation();
+  }, 5000);
+
+  timeElapse(together);
+  setInterval(function () {
+    timeElapse(together);
+  }, 500);
+
+  adjustCodePosition();
+  $("#code").typewriter();
+}
+</script>
+
+</body>
+</html>

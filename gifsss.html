@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Just for My Queen 💖</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body{
+  margin:0;
+  background: linear-gradient(180deg,#ffe0f0,#fff0f5,#fff);
+  font-family:sans-serif;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  min-height:100vh;
+  padding:20px;
+  text-align:center;
+}
+
+h1{
+  color:#bd1e59;
+  font-size:clamp(2rem,6vw,2.5rem);
+  margin-bottom:20px;
+}
+
+.gif-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  margin-bottom:30px;
+  width:100%;
+}
+
+.gif-container img{
+  width:min(45vw,200px);
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.gif-container img:hover{
+  transform: scale(1.1);
+}
+
+.spotify-container{
+  margin-top:10px;
+  width:100%;
+  max-width:400px;
+}
+
+.spotify-container iframe{
+  width:100%;
+  height:80px;
+  border-radius:12px;
+}
+
+button{
+  background:#bd1e59;
+  color:white;
+  padding:12px 20px;
+  font-size:clamp(16px,4vw,20px);
+  border:none;
+  border-radius:12px;
+  margin-top:20px;
+  cursor:pointer;
+  transition: transform 0.2s;
+}
+
+button:hover{
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<h1>Just For You 💖</h1>
+
+<div class="gif-container">
+  <img src="image1.gif" alt="Cute gif 1">
+  <img src="image2.gif" alt="Cute gif 2">
+  <img src="image7.gif" alt="Cute gif 7">
+</div>
+
+<div class="spotify-container">
+  <h2>My Dedication to you💞💞 🎵</h2>
+  <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/05S7VaTrGBdizlcLGcnEQb?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  <p>Or open on Spotify: 
+    <a href="https://open.spotify.com/playlist/5e5AIFtcoKf2kjqfvJdjt8?si=I_TJWx1iQJeXpG0W2WJAsw&pt=eec7dcbea7335aad8619f4746fd2c15c&pi=NC-yAABvST-KX" target="_blank">
+      
+
+
+      Click Here
+    </a>
+  </p>
+</div>
+
+<!-- Optional: Back to Letter / Queen page -->
+<button onclick="window.location.href='queen.html'">
+  Back to My Letter 💌
+</button>
+
+</body>
+</html>
